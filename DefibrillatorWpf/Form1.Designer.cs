@@ -96,6 +96,7 @@
             this.btnAdatlekeres.TabIndex = 6;
             this.btnAdatlekeres.Text = "Adatok lekérése";
             this.btnAdatlekeres.UseVisualStyleBackColor = true;
+            this.btnAdatlekeres.Click += new System.EventHandler(this.btnAdatlekeres_Click);
             // 
             // btnUjadatok
             // 
@@ -105,6 +106,7 @@
             this.btnUjadatok.TabIndex = 7;
             this.btnUjadatok.Text = "Új adat megadása";
             this.btnUjadatok.UseVisualStyleBackColor = true;
+            this.btnUjadatok.Click += new System.EventHandler(this.btnUjadatok_Click);
             // 
             // frmFo
             // 

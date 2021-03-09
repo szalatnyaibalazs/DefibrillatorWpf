@@ -36,7 +36,7 @@ namespace DefibrillatorWpf
         }
         static void DistCalc(double x, double y)
         {
-
+            double dis = Math.Sqrt((x*x)+(y*y))*6371;
         }
     }
 }

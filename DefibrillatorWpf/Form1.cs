@@ -26,12 +26,35 @@ namespace DefibrillatorWpf
             while (!be.EndOfStream)
             {
                 string[] a = be.ReadLine().Split(';');
-                keszulekek.Add(new Keszulek(int.Parse(a[0]),a[1],double.Parse(a[2]),double.Parse(a[3]),a[4],a[5]));
+                keszulekek.Add(new Keszulek(int.Parse(a[0]), a[1], double.Parse(a[2].Replace(".", ",")), double.Parse(a[3].Replace(".",",")), a[4], a[5]));
             }
         }
         private void btnKilepes_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        static bool VanAdat(string x, string y)
+        {
+            if (x !=""&&y!="")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void btnAdatlekeres_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUjadatok_Click(object sender, EventArgs e)
+        {
+            tbXkoord.Text = "";
+            tbYkoord.Text = "";
+            lbAdatok.Items.Clear();
         }
     }
 }
