@@ -47,7 +47,22 @@ namespace DefibrillatorWpf
 
         private void btnAdatlekeres_Click(object sender, EventArgs e)
         {
+            try
+            {
+                foreach (var k in keszulekek)
+                {
+                double xcord = (k.Longitude - double.Parse(tbYkoord.Text)) * Math.Cos(k.Latitude + double.Parse(tbXkoord.Text) / 2);
+                double ycord = k.Latitude - double.Parse(tbXkoord.Text);
+                lbAdatok.Items.Add($"{xcord} - {ycord}");
+                }
 
+            }
+            catch (Exception ex )
+            {
+                MessageBox.Show(ex.Message);
+                tbXkoord.Text = "";
+                tbYkoord.Text = "";
+            }
         }
 
         private void btnUjadatok_Click(object sender, EventArgs e)

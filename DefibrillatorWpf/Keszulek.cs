@@ -10,19 +10,19 @@ namespace DefibrillatorWpf
     class Keszulek
     {
         private int id;
-        int Id { get { return id; } }
+        public int Id { get { return id; } }
         private string name;
-        string Name { get { return name; } }
+        public string Name { get { return name; } }
         private double latitude;
-        double Latitude { get { return latitude; } }
+        public double Latitude { get { return latitude; } }
         private double longitude;
-        double Longitude { get { return longitude; } }
+        public double Longitude { get { return longitude; } }
         private string tel;
-        string Tel{ get { return tel; } }
+        public string Tel{ get { return tel; } }
         private string address;
-        string Address { get { return address; } }
+        public string Address { get { return address; } }
         private double dist;
-        double Dist { get { return dist; } }
+        public double Dist { get { return dist; } }
 
 
         public Keszulek(int id,string name,double latitude,double longitude, string tel,string address)
@@ -32,7 +32,7 @@ namespace DefibrillatorWpf
             this.latitude = latitude;
             this.longitude = longitude;
             this.tel = tel;
-            this.address = address;
+            this.address = address;            
         }
         static void DistCalc(double x, double y)
         {
